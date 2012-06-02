@@ -1,0 +1,1308 @@
+#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[cm-default]{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\setmainfont[BoldFont=SimHei,ItalicFont=SimHei]{SimSun}
+\setsansfont[BoldFont=SimHei]{SimHei}
+\setmonofont{NSimSun}
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt
+\renewcommand\arraystretch{1.5}
+\renewcommand{\contentsname}{目录}
+\renewcommand{\listfigurename}{插图目录}
+\renewcommand{\listtablename}{表格目录}
+\renewcommand{\refname}{参考文献}
+\renewcommand{\abstractname}{摘要}
+\renewcommand{\indexname}{索引}
+\renewcommand{\tablename}{表}
+\renewcommand{\figurename}{图}
+\end_preamble
+\use_default_options true
+\language chinese-simplified
+\inputencoding utf8-plain
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\leftmargin 2.5cm
+\topmargin 3cm
+\rightmargin 2.5cm
+\bottommargin 3cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+机械设计课程设计
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+设计任务
+\end_layout
+
+\begin_layout Subsection
+设计要求
+\end_layout
+
+\begin_layout Enumerate
+设计题目：加热炉装料机（参考图
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:1"
+
+\end_inset
+
+）
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../学习相关/机械设计课程设计/图片1.png
+	width 10cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:1"
+
+\end_inset
+
+加热炉装料机设计参考图
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+设计要求：
+\begin_inset Newline newline
+\end_inset
+
+装料机用于向加热炉内送料，由电动机驱动，室内工作，通过传动装置使装料机推杆作往复移动，将物料送入加热炉内。
+\end_layout
+
+\begin_layout Enumerate
+生产批量：5台。
+\end_layout
+
+\begin_layout Enumerate
+动力源为三相交流电380/220V，电机单向转动，载荷较平稳。
+\end_layout
+
+\begin_layout Enumerate
+使用期限为10年，每年工作300天，大修期为三年，双班制工作。 
+\end_layout
+
+\begin_layout Enumerate
+生产厂具有加工7、8级精度齿轮、蜗轮的能力。
+\end_layout
+
+\begin_layout Subsection
+技术要求
+\end_layout
+
+\begin_layout Enumerate
+推杆行程：
+\begin_inset Formula $280mm$
+\end_inset
+
+（有效工作行程不小于推杆行程的
+\begin_inset Formula $35\%$
+\end_inset
+
+）
+\end_layout
+
+\begin_layout Enumerate
+推杆工作周期：
+\begin_inset Formula $3.3s$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+推杆所需推力：
+\begin_inset Formula $6400N$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+设计任务
+\end_layout
+
+\begin_layout Enumerate
+完成加热炉装料机总体方案设计和论证，绘制总体原理方案图。
+\end_layout
+
+\begin_layout Enumerate
+完成主要传动部分的结构设计。
+\end_layout
+
+\begin_layout Enumerate
+完成装配图一张（用A0或A1图纸），零件图两张。
+\end_layout
+
+\begin_layout Enumerate
+编写设计说明书1份。
+\end_layout
+
+\begin_layout Section
+总体方案设计
+\end_layout
+
+\begin_layout Subsection
+执行机构的选型与设计
+\end_layout
+
+\begin_layout Subsubsection
+机构分析
+\end_layout
+
+\begin_layout Standard
+原动件为电动机，输出为匀速圆周运动。执行机构使用推杆完成送料功能，回程不做功，因此应当具有急回特性，并能将原动件的回转运动转化为推杆的直线往复运动。此外，机构的
+传力特性应当良好，具有较小的压力角。
+\end_layout
+
+\begin_layout Standard
+设计任务要求推杆工作周期
+\begin_inset Formula $3.3s$
+\end_inset
+
+，折合周期为
+\begin_inset Formula $18.2RPM$
+\end_inset
+
+，相对应地，若电机转速为
+\begin_inset Formula $1000RPM$
+\end_inset
+
+，则减速比
+\begin_inset Formula $i=\frac{1000}{18.2}=54.9$
+\end_inset
+
+，这样大的传动比，需要使用一级蜗轮蜗杆减速器和一级齿轮减速器。考虑到蜗轮蜗杆减速效率不高，将其安排为转速较低的第二级。第一级通过斜齿圆柱齿轮进行减速。
+\end_layout
+
+\begin_layout Standard
+使用了蜗轮蜗杆减速器后，输出运动仍然为等速圆周运动。为将此运动变成带有急回特性的推杆直线往复运动，选择使用摆动导杆机构，如图
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:2"
+
+\end_inset
+
+所示，推程为慢速，回程为快速，且压力角适中。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../学习相关/机械设计课程设计/图片2.png
+	width 10cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:2"
+
+\end_inset
+
+机械运动简图
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+参数确定
+\end_layout
+
+\begin_layout Standard
+下面确定机构的参数。
+\end_layout
+
+\begin_layout Subparagraph*
+预估电动机功率和选定电动机。
+\end_layout
+
+\begin_layout Standard
+估算效率：
+\begin_inset Formula $\eta_{12}=\eta_{23}=0.97$
+\end_inset
+
+，
+\begin_inset Formula $\eta_{34}=0.83$
+\end_inset
+
+，
+\begin_inset Formula $\eta_{45}=\eta_{56}=0.97$
+\end_inset
+
+。一对滚动轴承的效率
+\begin_inset Formula $\eta_{B}=0.99$
+\end_inset
+
+。则总效率：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\eta=\eta_{B}\eta_{12}\eta_{B}\eta_{23}\eta_{34}\eta_{45}\eta_{56}\eta_{B}\thickapprox0.74\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+设行程速比系数
+\begin_inset Formula $K=2$
+\end_inset
+
+，则推程功率：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+P=F\frac{d}{\frac{K}{K+1}T}=6400\frac{280}{1000\times3.3\times\frac{2}{3}}W=814.5W\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+考虑到推程功率不均匀，
+\begin_inset Formula $K_{P}=1.3$
+\end_inset
+
+，则
+\begin_inset Formula $P_{\text{额}}=K_{P}P=1.3\times814.5W=1058.9W$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+电机功率：
+\begin_inset Formula \[
+P=\frac{P_{\text{额}}}{\eta}=1.441kW\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+本装置工作中载荷平稳，故电机功率稍大于
+\begin_inset Formula $P$
+\end_inset
+
+即可。选择Y系列三相异步电动机Y90L-4型号，额定功率
+\begin_inset Formula $1.5kW$
+\end_inset
+
+，满载转速
+\begin_inset Formula $1400RPM$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Subparagraph
+确定动力参数。
+\end_layout
+
+\begin_layout Standard
+总传动比：
+\begin_inset Formula $i=\frac{1400}{18.2}=76.9$
+\end_inset
+
+，设计使齿轮传动
+\begin_inset Formula $i_{G}=2.56$
+\end_inset
+
+，蜗轮蜗杆传动
+\begin_inset Formula $i_{W}=30$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+电机输出：
+\begin_inset Formula $P_{0}=1.44kW$
+\end_inset
+
+，
+\begin_inset Formula $n_{0}=1400RPM$
+\end_inset
+
+，因此，
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+T_{0}=\frac{9550}{n_{0}}P_{0}=9.823N\cdot m\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+低速齿轮轴（蜗杆轴）：
+\begin_inset Formula $P_{2}=P_{0}\eta_{B}\eta_{12}=1.36kW$
+\end_inset
+
+，
+\begin_inset Formula $n_{2}=\frac{n_{0}}{i_{12}}=546.9RPM$
+\end_inset
+
+，因此，
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+T_{2}=\frac{9550}{n_{2}}P_{2}=23.8N\cdot m\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+蜗轮轴：
+\begin_inset Formula $P_{4}=P_{2}\eta_{B}\eta_{34}=1.13kW$
+\end_inset
+
+，
+\begin_inset Formula $n_{4}=\frac{n_{2}}{i_{34}}=18.2RPM$
+\end_inset
+
+，因此，
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+T_{4}=\frac{9550}{n_{4}}P_{4}=592.9N\cdot m\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+以上运动参数加以汇总，列表如下：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="8">
+<features>
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+轴名
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+输入功率/kW
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+输出功率/kW
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+输入转矩/
+\begin_inset Formula $N\cdot m$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+输出转矩/
+\begin_inset Formula $N\cdot m$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+转速/RPM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+传动比
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+效率
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+电机
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.44
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9.82
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1400
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.99
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+高速齿轮
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.43
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.42
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9.75
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9.69
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1400
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.99
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+低速齿轮
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.36
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.35
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+23.75
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+23.51
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+546.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.56
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.99
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+蜗轮
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.13
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.12
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+592.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+587.0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+18.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+30
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.99
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+传动零件的设计
+\end_layout
+
+\begin_layout Subsubsection
+联轴器
+\end_layout
+
+\begin_layout Standard
+联轴器根据电机的尺寸和功率进行确定。
+\end_layout
+
+\begin_layout Standard
+选用电机为Y90L-4型，查表
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-1"
+
+\end_inset
+
+得：轴长度
+\begin_inset Formula $E=50mm$
+\end_inset
+
+，直径
+\begin_inset Formula $D=24mm$
+\end_inset
+
+，键槽宽
+\begin_inset Formula $F=8mm$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+输出载荷较平稳，因此载荷均匀系数
+\begin_inset Formula $K_{A}=1$
+\end_inset
+
+，
+\begin_inset Formula $T_{C}=K_{A}T=9.82N\cdot m$
+\end_inset
+
+，查表
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-2"
+
+\end_inset
+
+，选用LM2梅花形弹性联轴器。
+\end_layout
+
+\begin_layout Standard
+主动端为J型轴孔，A型键槽，轴孔直径
+\begin_inset Formula $d_{J}=24mm$
+\end_inset
+
+，轴孔长度
+\begin_inset Formula $L_{1}=38mm$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+从动端为Y型轴孔，A型键槽，轴孔直径
+\begin_inset Formula $d_{1}=30mm$
+\end_inset
+
+，轴孔长度
+\begin_inset Formula $L=82mm$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Subsubsection
+齿轮
+\end_layout
+
+\begin_layout Subparagraph
+材料。
+\end_layout
+
+\begin_layout Standard
+主动轮转速
+\begin_inset Formula $n_{1}=1400RPM$
+\end_inset
+
+，较低，故主动轮、从动轮均采用
+\begin_inset Formula $45\#$
+\end_inset
+
+钢，调质处理。小齿轮硬度
+\begin_inset Formula $270HB$
+\end_inset
+
+，大齿轮硬度
+\begin_inset Formula $230HB$
+\end_inset
+
+。精度等级为8级。
+\end_layout
+
+\begin_layout Subparagraph
+基本尺寸参数。
+\end_layout
+
+\begin_layout Standard
+采用闭式软齿面传动。由文献
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-3"
+
+\end_inset
+
+查得：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+d_{1}\geqslant A_{d}\sqrt[3]{\frac{KT_{1}}{\psi_{d}\sigma_{HP}^{2}}\frac{u\pm1}{u}}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对于主动齿轮，取
+\begin_inset Formula $A_{d}=756$
+\end_inset
+
+，
+\begin_inset Formula $K=1.4$
+\end_inset
+
+，
+\begin_inset Formula $\beta=15^{\circ}$
+\end_inset
+
+，
+\begin_inset Formula $T=24N\cdot m$
+\end_inset
+
+，
+\begin_inset Formula $\psi_{a}=0.6$
+\end_inset
+
+，
+\begin_inset Formula $u=2.56$
+\end_inset
+
+时：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\psi_{d}=(u+1)/2=1.068\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+接触疲劳极限，
+\begin_inset Formula $\sigma_{Hlim1}=610MPa$
+\end_inset
+
+，
+\begin_inset Formula $\sigma_{Hlim2}=580MPa$
+\end_inset
+
+：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\sigma_{HP1}=0.9\sigma_{Hlim1}=549MPa\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\sigma_{HP2}=0.9\sigma_{Hlim2}=522MPa\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+因此计算：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+d_{1}\geqslant756\times\sqrt[3]{\frac{1.4\times24}{1.068\times522^{2}}\frac{3.56}{2.56}}=41.15mm\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+取
+\begin_inset Formula $d_{1}=42mm$
+\end_inset
+
+。此时圆周速度
+\begin_inset Formula $v_{1}=\frac{\pi d_{1}n_{1}}{60000}=\frac{\pi\times42\times1400}{60000}=3.08m/s$
+\end_inset
+
+，可以选择8级精度。
+\end_layout
+
+\begin_layout Standard
+选择
+\begin_inset Formula $z_{1}=33$
+\end_inset
+
+，则根据传动比
+\begin_inset Formula $z_{2}=i_{G}z_{1}=33\times2.56=84.5$
+\end_inset
+
+，圆整为85。传动比误差为：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\Delta=\frac{\frac{85}{33}-2.56}{2.56}\times100\%=0.6\%\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+符合要求。
+\end_layout
+
+\begin_layout Standard
+模数
+\begin_inset Formula $m_{t}=\frac{d_{1}}{z_{1}}=\frac{42}{33}=1.273$
+\end_inset
+
+，因此法向模数定为
+\begin_inset Formula $m_{n}=1.25$
+\end_inset
+
+，螺旋角：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\beta=\arccos\frac{m_{n}}{m_{t}}=10.9^{\circ}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+下面可以确定主动轮和从动轮的基圆直径。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+d_{2}=m_{t}z_{2}=1.273\times85=108.2mm\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+d_{1}=42mm\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+齿宽：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+b=\psi_{d}d_{1}=1.068\times42=44.86mm\approx45mm\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+中心距：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+d=\frac{d_{1}+d_{2}}{2}=75.1mm\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+中心距圆整为
+\begin_inset Formula $75mm$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Marginal
+status open
+
+\begin_layout Plain Layout
+传动参数计算结果
+\end_layout
+
+\begin_layout Plain Layout
+模数
+\begin_inset Formula $m_{t}=1.273$
+\end_inset
+
+，
+\begin_inset Formula $m_{n}=1.25$
+\end_inset
+
+，
+\begin_inset Formula $\beta=10.9^{\circ}$
+\end_inset
+
+，
+\begin_inset Formula $b=45mm$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+主动轮：
+\begin_inset Formula $d_{1}=42mm$
+\end_inset
+
+，
+\begin_inset Formula $z_{1}=33$
+\end_inset
+
+，，，
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "1"
+key "key-1"
+
+\end_inset
+
+王之栎，王大康.机械设计综合课程设计[M].北京：机械工业出版社，2012：202.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "2"
+key "key-2"
+
+\end_inset
+
+王之栎，王大康.机械设计综合课程设计[M].北京：机械工业出版社，2012：147.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "3"
+key "key-3"
+
+\end_inset
+
+王之栋，马纲，陈心颐等.机械设计[M].北京：北京航空航天大学出版社，2011年8月：265.
+\end_layout
+
+\end_body
+\end_document
